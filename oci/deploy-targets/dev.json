@@ -1,0 +1,13 @@
+{
+  "environment": "dev",
+  "approvalRequired": true,
+  "targets": ["resource-manager", "ocir", "oke", "functions", "api-gateway"],
+  "runtime": {
+    "orchestrator": "langgraph",
+    "modelGateway": "litellm",
+    "modelProvider": "oci-genai",
+    "toolGateway": "oracle-mcp",
+    "memoryState": "oracle-26ai",
+    "cache": "oci-cache-valkey-or-valkey"
+  }
+}
