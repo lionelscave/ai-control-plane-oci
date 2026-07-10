@@ -1,0 +1,15 @@
+{
+  "projectId": "ai-control-plane-oci",
+  "schemaVersion": "0.4-draft",
+  "profile": "github-orchestrated-oci-control-plane:v0.4",
+  "localOnlyUntilApproved": true,
+  "externalActionExecuted": false,
+  "outputs": [
+    "components/",
+    "oracle-26ai/",
+    "oci/terraform/",
+    "oci/buildspec.yaml",
+    "deploy/dev.plan.md",
+    "docs/"
+  ]
+}
