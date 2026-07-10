@@ -1,0 +1,23 @@
+{
+  "id": "github-orchestrated-oci-control-plane:v0.4",
+  "schemaVersion": "0.4-draft",
+  "deploymentMode": "approval-gated",
+  "repoPublishAction": "requires-approval-a",
+  "ociDeployAction": "requires-approval-b",
+  "requiredComponents": [
+    "control-plane-api",
+    "approval-gateway",
+    "langgraph-runtime",
+    "litellm-gateway",
+    "oracle-mcp-gateway",
+    "memory-state-service",
+    "workflow-workers",
+    "action-functions",
+    "oracle-26ai",
+    "valkey-cache",
+    "oci-genai",
+    "api-gateway"
+  ],
+  "allowedDeployTargets": ["oke", "functions", "resource-manager", "ocir", "api-gateway"],
+  "externalActionExecuted": false
+}
