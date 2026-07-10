@@ -1,0 +1,4 @@
+compartment_ocid = "onecli-managed-or-resource-manager-variable"
+region = "onecli-managed-or-resource-manager-variable"
+environment = "dev"
+approval_required = true
