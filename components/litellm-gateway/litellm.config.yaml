@@ -1,0 +1,23 @@
+model_list:
+  - model_name: commandforge-default
+    litellm_params:
+      model: oci_genai/${OCI_GENAI_DEFAULT_MODEL_ALIAS}
+      api_base: ${OCI_GENAI_ENDPOINT}
+      compartment_id: ${OCI_GENAI_COMPARTMENT_REF}
+  - model_name: commandforge-fast
+    litellm_params:
+      model: oci_genai/${OCI_GENAI_FAST_MODEL_ALIAS}
+      api_base: ${OCI_GENAI_ENDPOINT}
+      compartment_id: ${OCI_GENAI_COMPARTMENT_REF}
+  - model_name: commandforge-reasoning
+    litellm_params:
+      model: oci_genai/${OCI_GENAI_REASONING_MODEL_ALIAS}
+      api_base: ${OCI_GENAI_ENDPOINT}
+      compartment_id: ${OCI_GENAI_COMPARTMENT_REF}
+
+router_settings:
+  routing_strategy: usage-based-routing
+  enable_pre_call_checks: true
+
+general_settings:
+  master_key: ${LITELLM_MASTER_KEY_SECRET_REF}
