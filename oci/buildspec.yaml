@@ -1,0 +1,26 @@
+version: 0.1
+component: build
+timeoutInSeconds: 10000
+shell: bash
+failImmediatelyOnError: true
+env:
+  variables:
+    PROJECT_ID: ai-control-plane-oci
+    DEPLOYMENT_MODE: plan-only-until-approved
+steps:
+  - type: Command
+    name: Validate scaffold
+    command: |
+      npm run validate
+  - type: Command
+    name: Render local plan
+    command: |
+      npm run plan:local
+  - type: Command
+    name: Stop before deploy
+    command: |
+      echo "No OCI deployment is triggered by this buildspec. Approval B required."
+outputArtifacts:
+  - name: ai-control-plane-plan
+    type: BINARY
+    location: deploy/dev.plan.md
